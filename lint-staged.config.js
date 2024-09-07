@@ -1,13 +1,13 @@
 module.exports = {
-  // This will check TypeScript files
-  // '**/*.(ts|tsx)': () => 'npx tsc --noEmit',
+  // ตรวจสอบ TypeScript files
+  '**/*.(ts|tsx)': () => 'npx tsc --noEmit',
 
-  // This will lint and format TypeScript and JavaScript files
+  // Lint และฟอร์แมต TypeScript และ JavaScript
   '**/*.(ts|tsx|js)': (filenames) => [
     `npx eslint --fix ${filenames.join(' ')}`,
     `npx prettier --write ${filenames.join(' ')}`,
   ],
 
-  // This will format Markdown and JSON files
+  // ฟอร์แมต MarkDown และ JSON
   '**/*.(md|json)': (filenames) => `npx prettier --write ${filenames.join(' ')}`,
 };
