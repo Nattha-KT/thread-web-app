@@ -23,11 +23,12 @@ module.exports = {
     // Add your custom ESLint rules here
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
+    'react/react-in-jsx-scope': 'off',
     // 'prettier/prettier': ['error'],
   },
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };
