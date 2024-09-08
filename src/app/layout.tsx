@@ -10,7 +10,7 @@ import {
 } from '@clerk/nextjs';
 import './globals.css';
 import { dark } from '@clerk/themes';
-import { Topbar, Bottombar, LeftSidebar, RightSidebar } from './components';
+import { Topbar, Bottombar, LeftSidebar, RightSidebar } from '../components';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
