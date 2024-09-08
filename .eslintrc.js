@@ -19,12 +19,18 @@ module.exports = {
     ecmaVersion: 2021,
     sourceType: 'module',
   },
+
   rules: {
     // Add your custom ESLint rules here
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     'react/react-in-jsx-scope': 'off',
-    // 'prettier/prettier': ['error'],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   settings: {
     react: {
