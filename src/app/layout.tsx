@@ -8,7 +8,7 @@ import {
   // SignedOut,
   // UserButton,
 } from '@clerk/nextjs';
-import './globals.css';
+import '../styles/globals.css';
 import { dark } from '@clerk/themes';
 import { Topbar, Bottombar, LeftSidebar, RightSidebar } from '../components';
 
