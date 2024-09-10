@@ -30,6 +30,21 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Facilitate With
+
+<div align="left">
+  <img src="https://github.com/pingdotgg/uploadthing/raw/main/assets/uploadthing-logo-light-background.svg" height="40" alt="uploadthing logo"  />
+  <img width="16" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" height="40" alt="tailwindcss logo"  />
+  <img width="16" />
+  <img src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.png" height="40" alt="React-hook-form logo"  />
+  <img width="16" />
+  <img src="https://seeklogo.com/images/Z/zod-logo-B57E684330-seeklogo.com.png" height="40" alt="Zod logo"  />
+  <img width="16" />
+  <img src="https://cdn.prod.website-files.com/64c7a317aea92912392c0420/65aaac10cefb21924a62692b_clerk-purple-logo-p-500.png" height="40" alt="clerk logo"  />
+  <img width="16" />
+</div>
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
