@@ -11,13 +11,14 @@ export default async function OnboardingPage() {
   // if (userInfo?.onboarded) redirect('/');
 
   const userData = {
-    id: user.id,
-    objectId: {},
+    userId: user.id,
+    // objectId: {},
     username: user.username ?? '',
     name: user.firstName ?? '',
     bio: '',
     // image: userInfo ? userInfo?.image : user.imageUrl,
     image: user.imageUrl,
+    path: '',
   };
 
   return (

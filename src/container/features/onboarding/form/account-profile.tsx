@@ -17,6 +17,8 @@ import { ProfileUserFormValues } from '../schema';
 import Image from 'next/image';
 import { isBase64Image } from '@/libs/utils';
 import { useUploadThing } from '@/libs/helper';
+import { updateUser } from '@/actions/user.action';
+import { usePathname, useRouter } from 'next/navigation';
 
 export type AccountProfileProps = {
   user: TAccountUser;
@@ -26,6 +28,8 @@ export type AccountProfileProps = {
 export function AccountProfile({ user, btnTitle }: AccountProfileProps) {
   const [files, setFiles] = useState<File[]>([]);
   const { startUpload } = useUploadThing('media');
+  const pathname = usePathname();
+  const router = useRouter();
 
   const { profileForm } = useProfileForm(user);
 
@@ -43,6 +47,20 @@ export function AccountProfile({ user, btnTitle }: AccountProfileProps) {
     }
 
     //update user profile below
+    await updateUser({
+      name: values.name,
+      path: pathname,
+      username: values.username,
+      userId: user.userId,
+      bio: values.bio,
+      image: values.profile_photo,
+    });
+
+    if (pathname === '/profile/edit') {
+      router.back();
+    } else {
+      router.push('/');
+    }
   };
 
   const handleImage = (

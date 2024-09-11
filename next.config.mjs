@@ -3,6 +3,7 @@ const nextConfig = {
   experimental: {
     serverActions: true,
     serverComponentsExternalPackages: ['mongoose'],
+    // instrumentationHook: true,  // --> It will allow you to execute any startup script and this runs only once when the nextjs server starts.
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

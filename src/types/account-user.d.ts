@@ -1,8 +1,8 @@
 export interface TAccountUser {
-  id: string;
-  objectId: object;
+  userId: string;
   username: string;
   name: string;
   bio: string;
   image: string;
+  path: string;
 }
