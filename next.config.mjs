@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
+
+const allowedOrigins =
+  process.env.NEXT_PUBLIC_ALLOWED_ORIGINS?.split(',') || [];
+
 const nextConfig = {
   experimental: {
-    serverActions: true,
+    serverActions: {
+      allowedOrigins,
+    },
     serverComponentsExternalPackages: ['mongoose'],
     // instrumentationHook: true,  // --> It will allow you to execute any startup script and this runs only once when the nextjs server starts.
   },
