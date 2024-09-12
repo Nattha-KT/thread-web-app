@@ -1,2 +1,2 @@
 export * from './const';
-export * from './account-user';
+export * from './model';

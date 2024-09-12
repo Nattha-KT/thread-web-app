@@ -23,3 +23,18 @@ export async function updateUser(user: TAccountUser) {
     throw new Error(`Failed to create/update user: ${error.message}`);
   }
 }
+
+export async function fetchUser(userId: string) {
+  try {
+    connectToMongoDB();
+
+    return await User.findOne({ id: userId });
+    //// It similar to join in relationship
+    // .populate({
+    //   path: 'communities',
+    //   model: 'Community',
+    // });
+  } catch (error: any) {
+    throw new Error(`Failed to fetch user: ${error.message}`);
+  }
+}
