@@ -1,11 +1,10 @@
 'use client';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { getPostThreadFormSchema } from '../schema';
+import { getPostThreadFormSchema, PostThreadFormValues } from '../schema';
 
 export const usePostThreadForm = (userId: string) => {
-  const form = useForm<z.infer<typeof getPostThreadFormSchema>>({
+  const form = useForm<PostThreadFormValues>({
     resolver: zodResolver(getPostThreadFormSchema),
     defaultValues: {
       thread: '',
