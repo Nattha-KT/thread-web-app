@@ -35,6 +35,7 @@ const nextConfig = {
         hostname: 'placehold.co',
       },
     ],
+    domains: ['utfs.io'],
   },
 };
 

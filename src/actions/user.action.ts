@@ -1,7 +1,7 @@
 'use server';
 
 import { connectToMongoDB } from '@/db/connectDB';
-import { User } from '@/model';
+import { Community, User } from '@/model';
 import { TAccountUser } from '@/types';
 
 export async function updateUser(user: TAccountUser) {
@@ -25,15 +25,12 @@ export async function updateUser(user: TAccountUser) {
 }
 
 export async function fetchUser(userId: string) {
+  connectToMongoDB();
   try {
-    connectToMongoDB();
-
-    return await User.findOne({ id: userId });
-    //// It similar to join in relationship
-    // .populate({
-    //   path: 'communities',
-    //   model: 'Community',
-    // });
+    return await User.findOne({ id: userId }).populate({
+      path: 'communities',
+      model: Community,
+    });
   } catch (error: any) {
     throw new Error(`Failed to fetch user: ${error.message}`);
   }

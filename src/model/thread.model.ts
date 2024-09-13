@@ -1,6 +1,7 @@
+import { IThread } from '@/types';
 import mongoose from 'mongoose';
 
-const threadSchema = new mongoose.Schema({
+const threadSchema = new mongoose.Schema<IThread>({
   text: {
     type: String,
     required: true,

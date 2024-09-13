@@ -1,6 +1,7 @@
+import { ICommunity } from '@/types';
 import mongoose from 'mongoose';
 
-const communitySchema = new mongoose.Schema({
+const communitySchema = new mongoose.Schema<ICommunity>({
   id: {
     type: String,
     required: true,
