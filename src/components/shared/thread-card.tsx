@@ -28,17 +28,19 @@ export type ThreadCardProps = {
   isComment?: boolean;
 };
 
-export function ThreadCard({
-  id,
-  currentUserId,
-  parentId,
-  content,
-  author,
-  community,
-  createdAt,
-  comments,
-  isComment,
-}: ThreadCardProps) {
+export function ThreadCard({ threadcard }: { threadcard: ThreadCardProps }) {
+  const {
+    id,
+    currentUserId,
+    parentId,
+    content,
+    author,
+    community,
+    createdAt,
+    comments,
+    isComment,
+  } = threadcard;
+
   console.log('🚀 ~  currentUserId,parentId,:', currentUserId, parentId);
   return (
     <article
